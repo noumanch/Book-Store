@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--    <script src="jquery-3.3.1.min.js"></script>-->
+    <!--    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+</head>
+
+<body id="body">
+    <header>
+
+        <h1>Ubiqum Book Store</h1>
+
+    </header>
+
+
+    <div id="bookStore" class="container">
+        <input id="search" v-model="search" placeholder="Search" type="text">
+
+
+        <div id="card" v-for="data in filtereddescription">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front">
+                        <img class="mainImg" :src="data.portada" alt="">
+                    </div>
+                    <div class="back">
+                        <h2>Title</h2>
+                        <h3>{{data.titulo}}</h3>
+                        <button class="button"><a  :href="data.detalle">More Info</a></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="info.js"></script>
+</body>
+
+</html>
