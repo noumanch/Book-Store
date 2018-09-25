@@ -1,9 +1,19 @@
+html{
+    background: url(127358-free-books-background-3015x2010-screen.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+}
 #body{
-    background-color: black;
+    background-color: transparent;
+    margin: 8%;
+    border: 20px solid rgba(0, 0, 0, 0.9);
+
 }
 h1{
     text-align: center;
-    padding-top: 50px
 }
 .button{
     position: abolute;

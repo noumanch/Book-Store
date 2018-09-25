@@ -29,3 +29,10 @@ var bookStore = new Vue({
 
     });
 
+
+function createGrid(){
+
+    var table =document.createElement("table");
+    document.getElementById("createTable").append();
+    
+}
